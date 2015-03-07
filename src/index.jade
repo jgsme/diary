@@ -49,6 +49,10 @@ html
         |   {block:Text}
         include ./posts/text/template.jade
         |   {/block:Text}
+
+        |   {block:PostNotes}
+        include ./postnotes/template.jade
+        |   {/block:PostNotes}
         | {/block:Posts}
       | {block:IndexPage}
       |   {block:Pagination}
