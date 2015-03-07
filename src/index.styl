@@ -1,7 +1,9 @@
 html, body
   padding 0
   margin 0
-  background #f3f3f3
+
+body
+  background #451300
   font-family serif
   color #282828
   width 100%
@@ -9,6 +11,9 @@ html, body
   letter-spacing -0.02em
   line-height 1.4
   font-size 18px
+
+  #container
+    background-color #f3f3f3
 
   a
     color #282828
@@ -35,9 +40,16 @@ html, body
     padding-left 8%
     max-width 900px
 
+    img
+      width 100%
+
   .post
     margin-bottom 10em
 
+  .starcontainer
+    display inline
+
 @import 'header/*'
-@import 'footer/*'
 @import 'posts/**/*'
+@import 'pagination/*'
+@import 'footer/*'

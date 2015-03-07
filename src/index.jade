@@ -6,43 +6,53 @@ html
     style #{style}
     include ./hatenaStar.jade
   body
-    include ./header/template.jade
-    article
-      | {block:SearchPage}
-      include ./searchPage/template.jade
-      | {/block:SearchPage}
+    #container
+      include ./header/template.jade
+      article
+        | {block:SearchPage}
+        include ./searchPage/template.jade
+        | {/block:SearchPage}
 
-      | {block:Posts}
-      |   {block:Link}
-      include ./posts/link/template.jade
-      |   {/block:Link}
+        | {block:Posts}
+        |   {block:Link}
+        include ./posts/link/template.jade
+        |   {/block:Link}
 
-      |   {block:Answer}
-      include ./posts/answer/template.jade
-      |   {/block:Answer}
+        |   {block:Answer}
+        include ./posts/answer/template.jade
+        |   {/block:Answer}
 
-      |   {block:Chat}
-      include ./posts/chat/template.jade
-      |   {/block:Chat}
+        |   {block:Chat}
+        include ./posts/chat/template.jade
+        |   {/block:Chat}
 
-      |   {block:Video}
-      include ./posts/video/template.jade
-      |   {/block:Video}
+        |   {block:Video}
+        include ./posts/video/template.jade
+        |   {/block:Video}
 
-      |   {block:Audio}
-      include ./posts/audio/template.jade
-      |   {/block:Audio}
+        |   {block:Audio}
+        include ./posts/audio/template.jade
+        |   {/block:Audio}
 
-      |   {block:Photo}
-      include ./posts/photo/template.jade
-      |   {/block:Photo}
+        |   {block:Photo}
+        include ./posts/photo/template.jade
+        |   {/block:Photo}
 
-      |   {block:Quote}
-      include ./posts/quote/template.jade
-      |   {/block:Quote}
+        |   {block:Photoset}
+        include ./posts/photoset/template.jade
+        |   {/block:Photoset}
 
-      |   {block:Text}
-      include ./posts/text/template.jade
-      |   {/block:Text}
-      | {/block:Posts}
-    include ./footer/template.jade
+        |   {block:Quote}
+        include ./posts/quote/template.jade
+        |   {/block:Quote}
+
+        |   {block:Text}
+        include ./posts/text/template.jade
+        |   {/block:Text}
+        | {/block:Posts}
+      | {block:IndexPage}
+      |   {block:Pagination}
+      include ./pagination/template.jade
+      |   {/block:Pagination}
+      | {/block:IndexPage}
+      include ./footer/template.jade
