@@ -2,8 +2,8 @@
   include ../../date.jade
 
   .contents
-    blockquote {Quote}
-    .source
+    blockquote(class='length-{Length}') {Quote}
+    .caption
       | {block:Source}
       |   {Source}
       | {/block:Source}
