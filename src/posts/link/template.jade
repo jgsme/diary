@@ -1,0 +1,11 @@
+.link
+  include ../../date.jade
+  include ../../note.jade
+
+  .contents
+    h2
+      a(href='{URL}') {Name}
+    | {block:Description}
+    .description {Description}
+    | {/block:Description}
+    .starcontainer

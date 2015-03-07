@@ -1,0 +1,11 @@
+.text
+  include ../../date.jade
+  include ../../note.jade
+
+  .contents
+    | {block:Title}
+    h2
+      a(href='{Permalink}') {Title}
+    | {/block:Title}
+    .body {Body}
+    .starcontainer

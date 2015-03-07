@@ -1,0 +1,11 @@
+.quote
+  include ../../date.jade
+  include ../../note.jade
+
+  .contents
+    blockquote {Quote}
+    .source
+      | {block:Source}
+      |   {Source}
+      | {/block:Source}
+    .starcontainer

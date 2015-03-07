@@ -1,0 +1,18 @@
+.chat
+  include ../../date.jade
+  include ../../note.jade
+
+  .contents
+    | {block:Title}
+    h2
+      a(href='{Permalink}') {Title}
+    | {/block:Title}
+    ul
+      | {block:Lines}
+      li
+        | {block:Label}
+        .label {Label}
+        | {/block:Label}
+        .line {Line}
+      | {/block:Lines}
+    .starcontainer

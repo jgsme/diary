@@ -1,0 +1,16 @@
+.audio
+  include ../../date.jade
+  include ../../note.jade
+
+  .contents
+    | {block:IfShowAlbumArtOnAudioPosts}
+    |   {block:AlbumArt}
+    img(alt='{block:Artist}{Artist}{/block:Artist}{block:TrackName} - {TrackName}{/block:TrackName}', src='{AlbumArtURL}')
+    .player {AudioPlayerBlack}
+    .caption
+      | {block:Caption}
+      |   {Caption}
+      | {/block:Caption}
+    |   {/block:AlbumArt}
+    | {/block:IfShowAlbumArtOnAudioPosts}
+    .starcontainer
